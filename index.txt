@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Antonio Garduño Viviana - Desarrollador</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Samuel Garduño</a>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text fade-in">
+                    <h1>Samuel Antonio Garduño Viviana</h1>
+                    <h2>Desarrollador Junior</h2>
+                    <p>Apasionado por crear soluciones tecnológicas innovadoras y funcionales. Con experiencia en desarrollo web y móvil utilizando tecnologías modernas.</p>
+                    <div class="header-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Contactar
+                        </a>
+                        <a href="#projects" class="btn btn-outline">
+                            <i class="fas fa-code"></i> Ver Proyectos
+                        </a>
+                    </div>
+                </div>
+                <img src="img/blanco.webp" alt="Samuel Antonio Garduño Viviana" class="profile-image fade-in delay-1">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Mí</h2>
+            </div>
+            <div class="card fade-in">
+                <div class="info-list">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Teléfono:</strong> <a href="tel:+527225655614">+ 52 (722) 565 5614</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Correo electrónico:</strong> <a href="mailto:samuelagv05@gmail.com">samuelagv05@gmail.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <strong>Formación:</strong> Técnico en Programación (Titulado) | Actualmente estudiando Ingeniería en Desarrollo de Software
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Ubicación:</strong> México
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <strong>Disponibilidad:</strong> Tiempo completo / Freelance
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Habilidades</h2>
+            </div>
+            <div class="card fade-in">
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Desarrollo Web</h3>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Laravel</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>PHP</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>JavaScript</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>CSS</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Desarrollo Móvil</h3>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>React Native</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Java</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Bases de Datos</h3>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>MySQL</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Otros</h3>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Express.js</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Python</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Chart.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experiencia</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <h3>Desarrollador Web y Móvil</h3>
+                        <span class="date">2020 -> Presente</span>
+                        <p>Desarrollo de aplicaciones web con Laravel, Express.js y aplicaciones móviles con React Native. Implementación de bases de datos con MySQL y creación de interfaces interactivas con JavaScript y CSS.</p>
+                        <ul>
+                            <li>Desarrollo de APIs RESTful</li>
+                            <li>Implementación de sistemas de autenticación</li>
+                            <li>Diseño de interfaces responsivas</li>
+                            <li>Optimización de rendimiento</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in delay-1">
+                    <div class="timeline-content">
+                        <h3>Servicio Social - Sistema Estatal de Informática</h3>
+                        <span class="date">Duracion 7 meses</span>
+                        <p>Gestión de usuarios en el RUPAEMEX mediante correo electrónico y tickets. Otorgamiento de CUTS y organización de expedientes de los proyectos de la firma electrónica.</p>
+                        <ul>
+                            <li>Gestión de usuarios</li>
+                            <li>Procesamiento de solicitudes</li>
+                            <li>Organización de documentación</li>
+                            <li>Atención a usuarios</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Proyectos</h2>
+            </div>
+            <div class="project-grid">
+                <!-- Proyecto 1 -->
+                <div class="project fade-in">
+                    <img src="img/busway.png?height=200&width=300" alt="BusWay" class="project-img">
+                    <div class="project-content">
+                        <h3>BusWay</h3>
+                        <p>Sistema de gestión de rutas de autobuses con panel de administración y seguimiento.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://busway.fun/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Proyecto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project fade-in delay-1">
+                    <img src="/img/recetario.png" alt="Recetario" class="project-img">
+                    <div class="project-content">
+                        <h3>Recetario</h3>
+                        <p>Aplicación para gestionar recetas de cocina con login y almacenamiento de información.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML/CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://recetario-five.vercel.app/login.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Proyecto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="project fade-in delay-2">
+                    <img src="img/flores.png?height=200&width=300" alt="Flores Amarillas" class="project-img">
+                    <div class="project-content">
+                        <h3>Flores Amarillas</h3>
+                        <p>Proyecto web con una temática especial basado en React y Vercel.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://floresamarillas-alpha.vercel.app/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Ver Proyecto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Espacio para proyectos personales -->
+                <div class="project fade-in delay-1">
+                    <img src="/img/hospital.png?height=200&width=300" alt="App Móvil" class="project-img">
+                    <div class="project-content">
+                        <h3>Hospital</h3>
+                        <p>Proyecto hecho para un hospital para la gestion de los Medicos, Pacientes y hospitales.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">Bootstrap</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SamuAGV/CORRECION_CRUD_HOSPITAL" target="_blank">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project fade-in delay-1">
+                    <img src="/img/filtromatic.png?height=200&width=300" alt="FiltroMatic" class="project-img">
+                    <div class="project-content">
+                        <h3>FiltroMatic</h3>
+                        <p>Proyecto de banda transportadora que clasifica residuos por color mediante sensores.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Express.js</span>
+                            <span class="project-tag">Node</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SamuAGV/FiltroMatic" target="_blank">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="project fade-in delay-1">
+                    <img src="/img/sensor.png?height=200&width=300" alt="CRUD Sensores" class="project-img">
+                    <div class="project-content">
+                        <h3>CRUD de Sensores</h3>
+                        <p>Proyecto desarrollado en Laravel para la gestión de sensores.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Blade</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Teléfono</h3>
+                            <p>7225655614</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>samuelagv05@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Ubicación</h3>
+                            <p>México</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/samuel-gardu%C3%B1o-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/SamuAGV" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dev_samu_/" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card fade-in delay-1">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> Samuel Antonio Garduño Viviana. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/samuel-gardu%C3%B1o-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/SamuAGV" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/dev_samu_/" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    // ... (código existente)
+
+    // Form submission handling
+    const contactForm = document.getElementById("contact-form");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            // Send data to server or email service
+            fetch('https://formspree.io/f/your-form-id', { // Reemplaza 'your-form-id' con tu ID de Formspree
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    // Show success message
+                    alert("¡Gracias por tu mensaje! Te contactaré pronto.");
+                    // Reset form
+                    contactForm.reset();
+                } else {
+                    // Show error message
+                    alert("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
+            });
+        });
+    }
+
+    // ... (código existente)
+});
+    </script>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
