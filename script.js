@@ -704,3 +704,51 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.head.appendChild(style);
 });
+/*
+// Mejorar la función openModal
+function openModal(imageSrc, captionText) {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  const modalCaption = document.getElementById('modalCaption');
+  
+  // Mostrar el modal
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden'; // Deshabilitar scroll
+  
+  // Establecer la imagen y el caption
+  modalImg.src = imageSrc;
+  modalCaption.textContent = captionText || '';
+  
+  // Forzar el repintado para que la transición funcione
+  setTimeout(() => {
+    modal.classList.add('show');
+  }, 10);
+  
+  // Cerrar al hacer clic fuera de la imagen
+  modal.onclick = function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  };
+  
+  // Cerrar con la tecla ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+}
+
+// Función para cerrar el modal
+function closeModal() {
+  const modal = document.getElementById('imageModal');
+  modal.classList.remove('show');
+  
+  setTimeout(() => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Habilitar scroll
+  }, 300);
+}
+
+// Asignar el evento de cerrar al botón
+document.querySelector('.close').onclick = closeModal;*/
