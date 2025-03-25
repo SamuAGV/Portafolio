@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Antonio Garduño Viviana - Desarrollador</title>
+    <meta name="description" content="Portfolio profesional de Samuel Antonio Garduño Viviana, desarrollador web y móvil especializado en Laravel, PHP y React Native.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Samuel Antonio Garduño Viviana - Desarrollador">
+    <meta property="og:description" content="Portfolio profesional de Samuel Antonio Garduño Viviana, desarrollador web y móvil.">
+    <meta property="og:image" content="img/og-image.jpg">
+    <meta property="og:url" content="https://samuelgarduno.com">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <!-- Modal para ver imágenes -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Imagen ampliada">
+        <div id="modalCaption"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Samuel<span class="text-primary">Garduño</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> Sobre mí</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Habilidades</a></li>
+                <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experiencia</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Proyectos</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+        <div class="particles-container" id="particles-js"></div>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text fade-in">
+                    <span class="greeting">Hola, soy</span>
+                    <h1>Samuel Antonio <span class="text-primary">Garduño Viviana</span></h1>
+                    <h2 class="typed-text" id="typed"></h2>
+                    <p>Apasionado por crear soluciones tecnológicas innovadoras y funcionales. Con experiencia en desarrollo web y móvil utilizando tecnologías modernas.</p>
+                    <div class="header-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Contactar
+                        </a>
+                        <a href="#projects" class="btn btn-outline">
+                            <i class="fas fa-code"></i> Ver Proyectos
+                        </a>
+                        <a href="cv-samuel-garduno.pdf" class="btn btn-secondary" download>
+                            <i class="fas fa-download"></i> Descargar CV
+                        </a>
+                    </div>
+                </div>
+                <div class="header-image fade-in delay-1">
+                    <div class="image-wrapper">
+                        <img src="img/blanco.webp" alt="Samuel Antonio Garduño Viviana" class="profile-image">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#about">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div>
+                        <span class="scroll-text">Desplázate</span>
+                        <span class="arrow"></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Conóceme</span>
+                <h2>Sobre Mí</h2>
+                <div class="title-bg">Perfil</div>
+            </div>
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <div class="image-border">
+                        <img src="img/blanco.webp" alt="Samuel Antonio Garduño Viviana" class="about-img">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">3+</span>
+                        <span class="exp-text">Años de<br>Experiencia</span>
+                    </div>
+                </div>
+                <div class="about-text fade-in delay-1">
+                    <h3>Desarrollador Web & Móvil</h3>
+                    <p>Soy un desarrollador apasionado por la tecnología y la innovación. Me especializo en crear soluciones web y móviles que combinan funcionalidad y diseño atractivo. Actualmente estoy estudiando Ingeniería en Desarrollo de Software mientras trabajo en proyectos que me permiten aplicar y expandir mis conocimientos.</p>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Teléfono:</strong> <a href="tel:+527225655614">+ 52 (722) 565 5614</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Correo electrónico:</strong> <a href="mailto:samuelgarduno@example.com">samuelgarduno@example.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>Formación:</strong> Técnico en Programación (Titulado) | Ingeniería en Desarrollo de Software (En curso)
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Ubicación:</strong> México
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <strong>Disponibilidad:</strong> Tiempo completo / Freelance
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Contáctame
+                        </a>
+                        <a href="#projects" class="btn btn-outline">
+                            <i class="fas fa-eye"></i> Portafolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Mis habilidades</span>
+                <h2>Habilidades Técnicas</h2>
+                <div class="title-bg">Skills</div>
+            </div>
+            <div class="skills-container">
+                <div class="skills-tabs fade-in">
+                    <button class="tab-btn active" data-target="dev-web">Desarrollo Web</button>
+                    <button class="tab-btn" data-target="dev-movil">Desarrollo Móvil</button>
+                    <button class="tab-btn" data-target="databases">Bases de Datos</button>
+                    <button class="tab-btn" data-target="others">Otros</button>
+                </div>
+                
+                <div class="skills-content">
+                    <!-- Desarrollo Web -->
+                    <div class="tab-content active" id="dev-web">
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-laravel"></i>
+                                </div>
+                                <h3>Laravel</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90%"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-php"></i>
+                                </div>
+                                <h3>PHP</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85%"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <h3>JavaScript</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80%"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <h3>HTML/CSS</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75%"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                                <h3>Bootstrap 5</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75%"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Desarrollo Móvil -->
+                    <div class="tab-content" id="dev-movil">
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <h3>React Native</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75%"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <h3>Java</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70%"></div>
+                                </div>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bases de Datos -->
+                    <div class="tab-content" id="databases">
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3>MySQL</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85%"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3>MongoDB</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="30%"></div>
+                                </div>
+                                <span class="skill-percentage">30%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3>PostgreSQL</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="20%"></div>
+                                </div>
+                                <span class="skill-percentage">20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Otros -->
+                    <div class="tab-content" id="others">
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <h3>Express.js</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="40%"></div>
+                                </div>
+                                <span class="skill-percentage">40%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h3>Python</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="30%"></div>
+                                </div>
+                                <span class="skill-percentage">30%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3>Chart.js</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="50%"></div>
+                                </div>
+                                <span class="skill-percentage">50%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-cuttlefish"></i>
+                                </div>
+                                <h3>C++</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="50%"></div>
+                                </div>
+                                <span class="skill-percentage">50%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node"></i>
+                                </div>
+                                <h3>Node.js</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="50%"></div>
+                                </div>
+                                <span class="skill-percentage">50%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Mi trayectoria</span>
+                <h2>Experiencia Profesional</h2>
+                <div class="title-bg">Carrera</div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>2020 - Presente</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Desarrollador Web y Móvil</h3>
+                        <span class="company">Freelance</span>
+                        <p>Desarrollo de aplicaciones web con Laravel, Express.js y aplicaciones móviles con React Native. Implementación de bases de datos con MySQL y creación de interfaces interactivas con JavaScript y CSS.</p>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check-circle"></i> Desarrollo de APIs RESTful</li>
+                            <li><i class="fas fa-check-circle"></i> Implementación de sistemas de autenticación</li>
+                            <li><i class="fas fa-check-circle"></i> Diseño de interfaces responsivas</li>
+                            <li><i class="fas fa-check-circle"></i> Optimización de rendimiento</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span>7 meses</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Servicio Social - Sistema Estatal de Informática</h3>
+                        <span class="company">Gobierno del Estado</span>
+                        <p>Gestión de usuarios en el RUPAEMEX mediante correo electrónico y tickets. Otorgamiento de CUTS y organización de expedientes de los proyectos de la firma electrónica.</p>
+                        <ul class="timeline-list">
+                            <li><i class="fas fa-check-circle"></i> Gestión de usuarios</li>
+                            <li><i class="fas fa-check-circle"></i> Procesamiento de solicitudes</li>
+                            <li><i class="fas fa-check-circle"></i> Organización de documentación</li>
+                            <li><i class="fas fa-check-circle"></i> Atención a usuarios</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Mi portafolio</span>
+                <h2>Proyectos Recientes</h2>
+                <div class="title-bg">Trabajos</div>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Móvil</button>
+                <button class="filter-btn" data-filter="other">Otros</button>
+            </div>
+            
+            <div class="project-grid">
+                <!-- Proyecto 1 -->
+                <div class="project fade-in" data-category="web">
+                    <div class="project-img-container">
+                        <img src="img/busway.png" alt="BusWay" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <div class="project-links">
+                                    <a href="https://busway.fun/" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link zoom-image" onclick="openModal('img/busway.png', 'BusWay - Sistema de gestión de rutas de autobuses')">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>BusWay</h3>
+                        <p>Sistema de gestión de rutas de autobuses con panel de administración y seguimiento.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project fade-in delay-1" data-category="web">
+                    <div class="project-img-container">
+                        <img src="img/recetario.png" alt="Recetario" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <div class="project-links">
+                                    <a href="https://recetario-five.vercel.app/login.html" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link zoom-image" onclick="openModal('img/recetario.png', 'Recetario - Aplicación para gestionar recetas de cocina')">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Recetario</h3>
+                        <p>Aplicación para gestionar recetas de cocina con login y almacenamiento de información.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="project fade-in delay-2" data-category="web">
+                    <div class="project-img-container">
+                        <img src="img/flores.png" alt="Flores Amarillas" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <div class="project-links">
+                                    <a href="https://floresamarillas-alpha.vercel.app/" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link zoom-image" onclick="openModal('img/flores.png', 'Flores Amarillas - Proyecto web con temática especial')">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Flores Amarillas</h3>
+                        <p>Proyecto web con una temática especial basado en React y Vercel.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 4 -->
+                <div class="project fade-in" data-category="web">
+                    <div class="project-img-container">
+                        <img src="img/hospital.png" alt="Hospital" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <div class="project-links">
+                                    <a href="https://github.com/SamuAGV/CORRECION_CRUD_HOSPITAL" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-link zoom-image" onclick="openModal('img/hospital.png', 'Hospital - Sistema de gestión hospitalaria')">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Hospital</h3>
+                        <p>Proyecto hecho para un hospital para la gestión de los Médicos, Pacientes y hospitales.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">Bootstrap</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 5 -->
+                <div class="project fade-in delay-1" data-category="other">
+                    <div class="project-img-container">
+                        <img src="img/filtromatic.png" alt="FiltroMatic" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <div class="project-links">
+                                    <a href="https://github.com/SamuAGV/FiltroMatic" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-link zoom-image" onclick="openModal('img/filtromatic.png', 'FiltroMatic - Banda transportadora que clasifica residuos')">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>FiltroMatic</h3>
+                        <p>Proyecto de banda transportadora que clasifica residuos por color mediante sensores.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Express.js</span>
+                            <span class="project-tag">Node</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 6 -->
+                <div class="project fade-in delay-2" data-category="web">
+                    <div class="project-img-container">
+                        <img src="img/sensor.png" alt="CRUD Sensores" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <div class="project-links">
+                                    <a href="#" class="project-link zoom-image" onclick="openModal('img/sensor.png', 'CRUD de Sensores - Gestión de sensores en Laravel')">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>CRUD de Sensores</h3>
+                        <p>Proyecto desarrollado en Laravel para la gestión de sensores.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Laravel</span>
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Blade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item fade-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-text">Proyectos Completados</div>
+                </div>
+                
+                <div class="stat-item fade-in delay-1">
+                    <div class="stat-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="stat-number" data-count="1250">0</div>
+                    <div class="stat-text">Tazas de Café</div>
+                </div>
+                
+                <div class="stat-item fade-in delay-2">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-number" data-count="25000">0</div>
+                    <div class="stat-text">Líneas de Código</div>
+                </div>
+                
+                <div class="stat-item fade-in delay-3">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="stat-number" data-count="10">0</div>
+                    <div class="stat-text">Clientes Satisfechos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Ponte en contacto</span>
+                <h2>Contáctame</h2>
+                <div class="title-bg">Contacto</div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Teléfono</h3>
+                                <p><a href="tel:+527225655614">+ 52 (722) 565 5614</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:samuelgarduno@example.com">samuelgarduno@example.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Ubicación</h3>
+                                <p>México</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-card">
+                        <h3>Sígueme</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/samuel-gardu%C3%B1o-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/SamuAGV" class="social-link" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/dev_samu_/" class="social-link" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container fade-in delay-1">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-header">
+                            <h3>Envíame un mensaje</h3>
+                            <p>Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nombre <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <span class="logo-text">Samuel<span class="text-primary">Garduño</span></span>
+                    </a>
+                    <p>Desarrollador Web & Móvil</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone"></i> + 52 (722) 565 5614</p>
+                    <p><i class="fas fa-envelope"></i> samuelgarduno@example.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> México</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Redes Sociales</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/samuel-gardu%C3%B1o-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/SamuAGV" class="social-link" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/dev_samu_/" class="social-link" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Samuel Antonio Garduño Viviana. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#home" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

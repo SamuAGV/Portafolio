@@ -1,0 +1,433 @@
+// Enhanced JavaScript with smooth scrolling, animations, and interactivity
+document.addEventListener("DOMContentLoaded", () => {
+  // Preloader
+  const preloader = document.getElementById("preloader")
+  window.addEventListener("load", () => {
+    preloader.style.opacity = "0"
+    setTimeout(() => {
+      preloader.style.display = "none"
+    }, 500)
+  })
+
+  // Theme Toggle
+  const themeToggle = document.querySelector(".theme-toggle")
+  const body = document.body
+
+  // Check for saved theme preference
+  const savedTheme = localStorage.getItem("theme")
+  if (savedTheme === "light") {
+    body.classList.add("light-mode")
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>'
+  }
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light-mode")
+
+    if (body.classList.contains("light-mode")) {
+      themeToggle.innerHTML = '<i class="fas fa-sun"></i>'
+      localStorage.setItem("theme", "light")
+    } else {
+      themeToggle.innerHTML = '<i class="fas fa-moon"></i>'
+      localStorage.setItem("theme", "dark")
+    }
+  })
+
+  // Mobile Navigation Toggle
+  const hamburger = document.querySelector(".hamburger")
+  const navLinks = document.querySelector(".nav-links")
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active")
+    navLinks.classList.toggle("active")
+  })
+
+  // Close mobile menu when clicking on a nav link
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active")
+      navLinks.classList.remove("active")
+    })
+  })
+
+  // Active navigation link based on scroll position
+  const sections = document.querySelectorAll("section")
+  const navItems = document.querySelectorAll(".nav-link")
+
+  function setActiveNavItem() {
+    let current = ""
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop
+      const sectionHeight = section.clientHeight
+
+      if (window.pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute("id")
+      }
+    })
+
+    navItems.forEach((item) => {
+      item.classList.remove("active")
+      if (item.getAttribute("href") === `#${current}`) {
+        item.classList.add("active")
+      }
+    })
+  }
+
+  window.addEventListener("scroll", setActiveNavItem)
+
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault()
+
+      const targetId = this.getAttribute("href")
+      if (targetId === "#") return
+
+      const targetElement = document.querySelector(targetId)
+
+      if (targetElement) {
+        const navHeight = document.querySelector("nav").offsetHeight
+        const targetPosition = targetElement.offsetTop - navHeight
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        })
+      }
+    })
+  })
+
+  // Sticky navigation
+  const navbar = document.getElementById("navbar")
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+      navbar.classList.add("scrolled")
+    } else {
+      navbar.classList.remove("scrolled")
+    }
+  })
+
+  // Back to top button visibility
+  const backToTopButton = document.querySelector(".back-to-top")
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.add("visible")
+    } else {
+      backToTopButton.classList.remove("visible")
+    }
+  })
+
+  // Typed.js for header text animation
+  if (document.getElementById("typed")) {
+    const Typed = window.Typed // Ensure Typed is globally available
+    new Typed("#typed", {
+      strings: ["Desarrollador Web", "Desarrollador Móvil", "Programador Laravel", "Freelancer"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+    })
+  }
+
+  // Particles.js for header background
+  if (document.getElementById("particles-js")) {
+    const particlesJS = window.particlesJS // Ensure particlesJS is globally available
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+        },
+        color: {
+          value: "#4a8eff",
+        },
+        shape: {
+          type: "circle",
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+        },
+        size: {
+          value: 3,
+          random: true,
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#4a8eff",
+          opacity: 0.2,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "grab",
+          },
+          onclick: {
+            enable: true,
+            mode: "push",
+          },
+          resize: true,
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: {
+              opacity: 1,
+            },
+          },
+          push: {
+            particles_nb: 4,
+          },
+        },
+      },
+      retina_detect: true,
+    })
+  }
+
+  // Skills tabs
+  const tabButtons = document.querySelectorAll(".tab-btn")
+  const tabContents = document.querySelectorAll(".tab-content")
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.dataset.target
+
+      // Remove active class from all buttons and contents
+      tabButtons.forEach((btn) => btn.classList.remove("active"))
+      tabContents.forEach((content) => content.classList.remove("active"))
+
+      // Add active class to clicked button and corresponding content
+      button.classList.add("active")
+      document.getElementById(target).classList.add("active")
+
+      // Animate skill bars in the active tab
+      animateSkillBars()
+    })
+  })
+
+  // Projects filter
+  const filterButtons = document.querySelectorAll(".filter-btn")
+  const projects = document.querySelectorAll(".project")
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter
+
+      // Remove active class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"))
+
+      // Add active class to clicked button
+      button.classList.add("active")
+
+      // Filter projects
+      projects.forEach((project) => {
+        if (filter === "all" || project.dataset.category === filter) {
+          project.style.display = "block"
+          setTimeout(() => {
+            project.style.opacity = "1"
+            project.style.transform = "scale(1)"
+          }, 100)
+        } else {
+          project.style.opacity = "0"
+          project.style.transform = "scale(0.8)"
+          setTimeout(() => {
+            project.style.display = "none"
+          }, 300)
+        }
+      })
+    })
+  })
+
+  // Function to check if element is in viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect()
+    return rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0
+  }
+
+  // Function to animate skill bars
+  function animateSkillBars() {
+    const skillBars = document.querySelectorAll(".skill-progress")
+
+    skillBars.forEach((bar) => {
+      if (isInViewport(bar)) {
+        const progress = bar.getAttribute("data-progress")
+        bar.style.width = progress
+      }
+    })
+  }
+
+  // Function to animate counter
+  function animateCounter() {
+    const counters = document.querySelectorAll(".stat-number")
+
+    counters.forEach((counter) => {
+      if (isInViewport(counter) && !counter.classList.contains("animated")) {
+        counter.classList.add("animated")
+
+        const target = Number.parseInt(counter.getAttribute("data-count"))
+        let count = 0
+        const duration = 2000 // 2 seconds
+        const increment = Math.ceil(target / (duration / 16)) // 60fps
+
+        const updateCount = () => {
+          count += increment
+          if (count >= target) {
+            counter.textContent = target.toLocaleString()
+          } else {
+            counter.textContent = count.toLocaleString()
+            requestAnimationFrame(updateCount)
+          }
+        }
+
+        updateCount()
+      }
+    })
+  }
+
+  // Animate elements on scroll
+  function animateOnScroll() {
+    const fadeElements = document.querySelectorAll(".fade-in:not(.appeared)")
+
+    fadeElements.forEach((element) => {
+      if (isInViewport(element)) {
+        element.classList.add("appeared")
+      }
+    })
+
+    animateSkillBars()
+    animateCounter()
+  }
+
+  // Run animations on scroll
+  window.addEventListener("scroll", animateOnScroll)
+
+  // Run once on page load
+  setTimeout(() => {
+    animateOnScroll()
+  }, 500)
+
+  // Form submission handling
+  const contactForm = document.getElementById("contact-form")
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault()
+
+      // Get form data
+      const formData = new FormData(contactForm)
+      const name = formData.get("name")
+      const email = formData.get("email")
+      const subject = formData.get("subject") || "Contacto desde Portfolio"
+      const message = formData.get("message")
+
+      // Validate form data
+      if (!name || !email || !message) {
+        alert("Por favor, completa todos los campos requeridos.")
+        return
+      }
+
+      // Show loading state
+      const submitButton = contactForm.querySelector(".btn-submit")
+      const originalButtonText = submitButton.innerHTML
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...'
+      submitButton.disabled = true
+
+      // Send data to server or email service (using Formspree as an example)
+      fetch("https://formspree.io/f/your-form-id", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          message,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // Reset form
+          contactForm.reset()
+
+          // Show success message
+          alert("¡Gracias por tu mensaje! Te contactaré pronto.")
+
+          // Reset button
+          submitButton.innerHTML = originalButtonText
+          submitButton.disabled = false
+        })
+        .catch((error) => {
+          console.error("Error:", error)
+
+          // Show error message
+          alert("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.")
+
+          // Reset button
+          submitButton.innerHTML = originalButtonText
+          submitButton.disabled = false
+        })
+    })
+  }
+
+  // Modal for project images
+  const modal = document.getElementById("imageModal")
+  const modalImg = document.getElementById("modalImage")
+  const modalCaption = document.getElementById("modalCaption")
+  const closeBtn = document.querySelector(".close")
+
+  // Function to open modal
+  window.openModal = (imageSrc, caption) => {
+    modal.style.display = "block"
+    modalImg.src = imageSrc
+    modalCaption.innerHTML = caption || ""
+    document.body.style.overflow = "hidden" // Prevent scrolling when modal is open
+  }
+
+  // Close modal when clicking on X
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none"
+    document.body.style.overflow = "auto" // Re-enable scrolling
+  })
+
+  // Close modal when clicking outside the image
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none"
+      document.body.style.overflow = "auto" // Re-enable scrolling
+    }
+  })
+
+  // Close modal with Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.style.display === "block") {
+      modal.style.display = "none"
+      document.body.style.overflow = "auto" // Re-enable scrolling
+    }
+  })
+
+  // Set current year in footer
+  document.getElementById("current-year").textContent = new Date().getFullYear()
+})
+
